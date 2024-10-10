@@ -3,7 +3,7 @@ footer {
   background-color: var(--secondary-color);
   color: white;
   text-align: center;
-  padding: 10px 750px; /* Adjust the padding for more height */
+  padding: 10px 750px;
   width: 100%;
   position: relative;
 }

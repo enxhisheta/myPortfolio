@@ -1,0 +1,14 @@
+section {
+  padding: 10px 10px;
+}
+
+.container {
+  display: visible;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+  padding-left: 2rem;
+}
