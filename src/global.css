@@ -1,0 +1,34 @@
+:root {
+  --primary-color: #ea6ec0;
+  --secondary-color: #555555;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --btn-color: var(--primary-color);
+  --font-family: "Arial", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0.8, 0),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(../src/assets/images/background2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background 0.3s ease;
+  text-emphasis-color: var(--text-color);
+}
