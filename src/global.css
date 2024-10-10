@@ -32,3 +32,13 @@ body {
   transition: background 0.3s ease;
   text-emphasis-color: var(--text-color);
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}

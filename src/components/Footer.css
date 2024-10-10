@@ -1,0 +1,28 @@
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 10px 750px; /* Adjust the padding for more height */
+  width: 100%;
+  position: relative;
+}
+
+footer p {
+  margin: 0;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: white;
+}
