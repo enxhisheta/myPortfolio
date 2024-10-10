@@ -1,9 +1,8 @@
-/* Footer */
 footer {
   background-color: var(--secondary-color);
   color: white;
   text-align: center;
-  padding: 10px 750px;
+  padding: 20px 10px;
   width: 100%;
   position: relative;
 }
@@ -25,4 +24,10 @@ footer p {
 
 .social-links a:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 5px;
+  }
 }
