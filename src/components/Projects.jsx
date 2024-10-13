@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Projects.css";
+import Project from "./Project";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -13,11 +14,6 @@ const Projects = () => {
       description:
         "A revolutionary online platform designed to streamline the vehicle rental process...",
       image: "../assets/images/vehicool.png",
-      images: [
-        "../assets/images/vehicool1.jpg",
-        "../assets//images/vehicool2.jpg",
-        "../assets/images/vehicool3.jpg",
-      ],
     },
     {
       id: 2,
@@ -114,7 +110,13 @@ const Projects = () => {
               activeFilter === "all" || project.category === activeFilter
           )
           .map((project) => (
-            <div
+            <Project
+              key={project.id}
+              title={project.title}
+              {...project}
+              openModal={openModal}
+            />
+            /*<div
               key={project.id}
               className="project"
               onClick={() => openModal(project)}
@@ -123,12 +125,13 @@ const Projects = () => {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
+            */
           ))}
       </div>
 
       {modalData.isOpen && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal">
+          <div className="modal-content" onClick={(e) => e}>
             <span className="close" onClick={closeModal}>
               &times;
             </span>
