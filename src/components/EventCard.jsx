@@ -13,4 +13,4 @@ const EventCard = ({ event, deleteEvent }) => {
   );
 };
 
-export { EventCard };
+export default EventCard;

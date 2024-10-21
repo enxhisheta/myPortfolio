@@ -43,4 +43,4 @@ const EventForm = ({ addEvent }) => {
   );
 };
 
-export { EventForm };
+export default EventForm;
