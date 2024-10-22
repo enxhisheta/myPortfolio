@@ -1,23 +1,46 @@
-import { StrictMode } from "react";
+import React from "react";
+import { StrictMode, Suspense, lazy } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
-import AnotherComponent from "./AnotherComponent";
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const SkillsPage = lazy(() => import("./pages/SkillsPage"));
+const EventsPage = lazy(() => import("./pages/EventsPage"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
   },
   {
-    path: "/another",
-    element: <AnotherComponent />,
+    path: "/projects",
+    element: <ProjectsPage />,
+  },
+  {
+    path: "/contact",
+    element: <ContactPage />,
+  },
+  {
+    path: "/skills",
+    element: <SkillsPage />,
+  },
+  {
+    path: "/events",
+    element: <EventsPage />,
   },
 ]);
 
+const MemoizedRouterProvider = React.memo(() => (
+  <RouterProvider router={router} />
+));
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Suspense fallback={<div>Loading...</div>}>
+      <MemoizedRouterProvider />
+    </Suspense>
   </StrictMode>
 );
 

@@ -1,5 +1,6 @@
 section {
   padding: 10px 10px;
+  color: white;
 }
 
 .container {
@@ -11,4 +12,5 @@ section {
 .about-text {
   flex: 1;
   padding-left: 2rem;
+  color: white;
 }

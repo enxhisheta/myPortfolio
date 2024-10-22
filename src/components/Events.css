@@ -1,23 +1,29 @@
 #events {
-  padding: 20px;
-  background-color: rgb(8, 8, 8, 0.7);
+  padding: 40px;
+  background-color: rgba(8, 8, 8, 0.8);
   color: white;
+  max-width: 100%;
 }
 
 form {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  width: 100%;
+  margin: 40px auto;
+  background-color: rgba(8, 8, 8, 0.9);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 input,
 textarea {
-  padding: 10px;
-  margin: 5px 0;
+  padding: 15px;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1.1rem;
 }
 
 .event-list {

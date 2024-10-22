@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../assets/images/logo.png";
 
@@ -28,9 +29,9 @@ const Header = () => {
     <header className={sticky ? "sticky" : ""}>
       <nav>
         <div className="logo">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="MyPortfolio Logo" />
-          </a>
+          </Link>
         </div>
         <div
           id="hamburger"
@@ -43,19 +44,19 @@ const Header = () => {
         </div>
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="/skills">Skills</Link>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="/events">Events</Link>
           </li>
         </ul>
       </nav>
@@ -63,4 +64,4 @@ const Header = () => {
   );
 };
 
-export { Header };
+export default Header;
